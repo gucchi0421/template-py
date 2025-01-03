@@ -26,14 +26,22 @@ tasks:
       - chown -R 1000:1000 .venv
       - uv venv -p python3.13 .venv
       - uv sync
-      - pre-commit install
+      - |
+        bash -c "
+        source .venv/bin/activate
+        pre-commit install
+        "
     silent: true
 
   s:
     desc: "依存パッケージのインストール"
     cmds:
       - uv sync
-      - pre-commit install
+      - |
+        bash -c "
+        source .venv/bin/activate
+        pre-commit install
+        "
     silent: true
 
   fmt:

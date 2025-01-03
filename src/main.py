@@ -4,7 +4,6 @@ load_dotenv()
 
 
 def main() -> None:
-    print("Hello World")
     hoge = ["hoge", "fuga"]
 
     for h in hoge:
