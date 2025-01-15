@@ -9,6 +9,7 @@ dependencies = [
   "pandas>=2.2.3",
   "requests>=2.32.3",
   "python-dotenv>=1.0.1",
+  "types-requests>=2.32.0.20241016",
 ]
 
 [tool.pytest.ini_options]
@@ -42,7 +43,7 @@ docstring-code-format = true
 
 [tool.ruff.lint]
 select = ["ALL"]
-ignore = ["T201", "COM812", "ISC001", "ERA001", "D"]
+ignore = ["E501", "T201", "COM812", "ISC001", "ERA001", "D"]
 unfixable = ["F401", "F841"]
 pydocstyle.convention = "google"
 

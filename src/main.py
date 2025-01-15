@@ -4,10 +4,7 @@ load_dotenv()
 
 
 def main() -> None:
-    hoge = ["hoge", "fuga"]
-
-    for h in hoge:
-        print(h)
+    print("Hello, World!")
 
 
 if __name__ == "__main__":

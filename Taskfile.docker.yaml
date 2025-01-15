@@ -14,12 +14,11 @@ tasks:
         --build-arg USERNAME=$(whoami)
     silent: true
 
-  sh:
-    desc: "コンテナを起動後、シェルに接続"
+  run:
     cmds:
-      - |
-        docker compose up -d
-        docker exec -it python-template-app-1 sh
+      - echo "Running..."
+      - echo ""
+      - docker compose run --rm app uv run {{ ._ENTRY_PATH }}
     silent: true
 
   up:
